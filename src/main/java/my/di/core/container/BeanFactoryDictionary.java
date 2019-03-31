@@ -1,8 +1,10 @@
-package my.di.core;
+package my.di.core.container;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import my.di.core.BeanFactory;
 
 public class BeanFactoryDictionary {
 	

@@ -1,8 +1,8 @@
-package my.di.core;
+package my.di.core.stub;
 
 import my.di.core.annotation.Bean;
 
-public class ConfigStub {
+public class 正常系Stub {
 	
 	@Bean
 	public Hoge2 hoge2(Hoge1 hoge1) {

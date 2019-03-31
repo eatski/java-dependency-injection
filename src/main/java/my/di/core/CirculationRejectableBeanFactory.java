@@ -1,6 +1,8 @@
 
 package my.di.core;
 
+import my.di.core.exception.CircularRequireException;
+
 public abstract class CirculationRejectableBeanFactory<T> implements BeanFactory<T>{
 	
 	private boolean resolving;
@@ -9,7 +11,7 @@ public abstract class CirculationRejectableBeanFactory<T> implements BeanFactory
 	@Override
 	public T get() {
 		if(resolving) {
-			throw new RuntimeException("再帰");
+			throw new CircularRequireException();
 		}
 		if(stock == null) {
 			resolving = true;

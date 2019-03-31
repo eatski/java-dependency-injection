@@ -8,6 +8,10 @@ import java.lang.reflect.InvocationTargetException;
 
 import org.junit.Test;
 
+import my.di.core.stub.Hoge1;
+import my.di.core.stub.Hoge2;
+import my.di.core.stub.正常系Stub;
+
 public class MethodBeanFactoryTest {
 	
 	@Test
@@ -17,8 +21,8 @@ public class MethodBeanFactoryTest {
 		ApplicationContext mock = mock(ApplicationContext.class);
 		when(mock.getBean(Hoge1.class)).thenReturn(hoge1);
 		MethodBeanFactory<Hoge2> factory = new MethodBeanFactory<>(
-				ConfigStub.class.getDeclaredMethod("hoge2", Hoge1.class),
-				new ConfigStub(), Hoge2.class, mock);
+				正常系Stub.class.getDeclaredMethod("hoge2", Hoge1.class),
+				new 正常系Stub(), Hoge2.class, mock);
 		
 		assertThat(factory.get().getHoge1()).isEqualTo(hoge1);
 	}

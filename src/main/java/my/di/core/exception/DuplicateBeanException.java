@@ -1,4 +1,4 @@
-package my.di.core;
+package my.di.core.exception;
 
 public class DuplicateBeanException extends RuntimeException {
 

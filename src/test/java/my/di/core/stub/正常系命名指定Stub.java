@@ -1,9 +1,9 @@
-package my.di.core;
+package my.di.core.stub;
 
 import my.di.core.annotation.Bean;
 import my.di.core.annotation.Qualifier;
 
-public class ConfigStub3 {
+public class 正常系命名指定Stub {
 	
 	
 	@Bean("a")

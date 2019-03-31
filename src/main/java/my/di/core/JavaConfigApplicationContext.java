@@ -5,6 +5,8 @@ import java.lang.reflect.Method;
 import java.util.List;
 
 import my.di.core.annotation.Bean;
+import my.di.core.container.BeanFactoryDictionary;
+import my.di.core.exception.DuplicateBeanException;
 
 public class JavaConfigApplicationContext implements ApplicationContext{
 	
